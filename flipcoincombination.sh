@@ -38,3 +38,25 @@ do
 done | sort -rn -k3 | head -1
 #echo $countS[$@]}
 
+#  Simulate single combination
+for ((i=0;i<50; i++))
+do
+       random=$((RANDOM%2))
+        random=$((RANDOM%2)
+        randomC1=$(characterconvert $random1)
+        randomC2=$(characterconvert $random2)
+         if [ -v countS[$randomC1$randomC2] ]
+       then
+            ((countD[randomC1$randomC2]++))
+      else
+            countS[$randomC1$randomC2]=1
+fi
+done
+echo "Winner in double combination"
+for key in ${!countD[@]}"
+do
+      # echo " percentage of $key =" $(($countD[$key]} * 100 /50))
+      # echo $(($countD[$key]}
+       echo $key ' - ' ${$countD[$key]}
+done | sort -rn -k3 | head -1
+
