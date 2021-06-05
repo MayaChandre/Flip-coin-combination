@@ -35,6 +35,8 @@ do
       # echo " percentage of $key =" $(($countS[$key]} * 100 /50))
       # echo $(($countS[$key]} 
        echo $key ' - ' $(($countS[$key]} 
+done | sort -rn -k3 | head -1
+# echo $countS[@]}
 
 #  Simulate Double combination
 for ((i=0;i<50; i++))
@@ -56,6 +58,7 @@ do
       # echo " percentage of $key =" $(($countD[$key]} * 100 /50))
       # echo $(($countD[$key]}
        echo $key ' - ' ${$countD[$key]}
+done | sort -rn -k3 | head -1
 
 #  Simulate Triplet combination
 for ((i=0;i<50; i++))
@@ -81,3 +84,4 @@ do
        echo $key ' - ' ${$countT[$key]}
 
 
+done | sort -rn -k3 | head -1
